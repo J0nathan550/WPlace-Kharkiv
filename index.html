@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Dima Savko Pidor" />
+    <meta name="description" content="Гнидота, как он появился на этой планете? Знайте гандона в лицо!" />
+    <meta property="theme-color" content="#FFFFFF">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dimasavkopidor.eu/" />
+    <meta property="og:title" content="Dima Savko Pidor" />
+    <meta property="og:description" content="Гнидота, как он появился на этой планете? Знайте гандона в лицо!" />
+    <meta property="og:image" content="https://dimasavkopidor.eu/dima.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://dimasavkopidor.eu/" />
+    <meta property="twitter:title" content="Dima Savko Pidor" />
+    <meta property="twitter:description" content="Гнидота, как он появился на этой планете? Знайте гандона в лицо!" />
+    <meta property="twitter:image" content="https://dimasavkopidor.eu/dima.jpg" />
+    <title>Dima Savko Pidor</title>
+    <link rel="icon" type="image/x-icon" href="dima.jpg">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            perspective: 1000px;
+        }
+        .image {
+            width: 300px;
+            height: auto;
+            transition: transform 0.1s ease-out;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="dima.jpg" alt="Dima" class="image">
+    </div>
+
+    <script>
+        const image = document.querySelector(".image");
+        let rotation = 0;
+        let mouseX = 0, mouseY = 0;
+        
+        document.addEventListener("mousemove", (event) => {
+            const { innerWidth, innerHeight } = window;
+            mouseX = (innerWidth / 2 - event.clientX) / 20;
+            mouseY = (innerHeight / 2 - event.clientY) / 20;
+            image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg)`;
+        });
+        
+        image.addEventListener("click", () => {
+            rotation += 360; 
+            image.style.transition = "transform 0.3s ease-out";
+            image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1.1)`;
+            
+            setTimeout(() => {
+                image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1)`;
+                image.style.transition = "transform 0.1s ease-out";
+            }, 300);
+        });
+    </script>
+</body>
+</html>
