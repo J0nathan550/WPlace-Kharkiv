@@ -15,17 +15,22 @@
     <meta property="twitter:title" content="Dima Savko Gnida" />
     <meta property="twitter:description" content="Гнидота, як він з'явився на цій планеті? Знайте гниду в обличчя!" />
     <meta property="twitter:image" content="https://dima-savko-gnida.fun/dima.jpg" />
-    <title>Dima Savko Gnida</title>
+
     <link rel="icon" type="image/x-icon" href="dima.jpg">
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+		body {
             background-color: white;
             margin: 0;
             overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
         }
         .container {
             perspective: 1000px;
@@ -36,35 +41,47 @@
             transition: transform 0.1s ease-out;
             user-select: none;
         }
+        .counter-container {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%) scale(2);
+            transform-origin: center bottom;
+        }
     </style>
+	<title>Dima Savko Gnida</title>
 </head>
 <body>
-    <div class="container">
-        <img src="dima.jpg" alt="Dima" class="image">
-    </div>
-
-    <script>
-        const image = document.querySelector(".image");
-        let rotation = 0;
-        let mouseX = 0, mouseY = 0;
-        
-        document.addEventListener("mousemove", (event) => {
-            const { innerWidth, innerHeight } = window;
-            mouseX = (innerWidth / 2 - event.clientX) / 20;
-            mouseY = (innerHeight / 2 - event.clientY) / 20;
-            image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg)`;
-        });
-        
-        image.addEventListener("click", () => {
-            rotation += 360; 
-            image.style.transition = "transform 0.3s ease-out";
-            image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1.1)`;
-            
-            setTimeout(() => {
-                image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1)`;
-                image.style.transition = "transform 0.1s ease-out";
-            }, 300);
-        });
-    </script>
+	 <div class="main-content">
+		<div class="container">
+			<img src="dima.jpg" alt="Dima" class="image">
+		</div>
+	</div>
+	<div class="counter-container">
+		<script type="text/javascript" src="https://counter.websiteout.com/js/36/15/0/0"></script>
+	</div>
+	<script>
+		const image = document.querySelector(".image");
+		let rotation = 0;
+		let mouseX = 0, mouseY = 0;
+		
+		document.addEventListener("mousemove", (event) => {
+			const { innerWidth, innerHeight } = window;
+			mouseX = (innerWidth / 2 - event.clientX) / 20;
+			mouseY = (innerHeight / 2 - event.clientY) / 20;
+			image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg)`;
+		});
+		
+		image.addEventListener("click", () => {
+			rotation += 360; 
+			image.style.transition = "transform 0.3s ease-out";
+			image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1.1)`;
+			
+			setTimeout(() => {
+				image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1)`;
+				image.style.transition = "transform 0.1s ease-out";
+			}, 300);
+		});
+	</script>
 </body>
 </html>
