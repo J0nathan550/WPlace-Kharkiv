@@ -304,111 +304,117 @@
          <script type="text/javascript" src="https://counter.websiteout.com/js/36/15/0/1"></script>
       </div>
       <script>
-         const images = [
-         	{ 
-         		src: 'gallery/dima.jpg', 
-         		alt: 'Dmitrii Gnidko', 
-         		name: 'Дмитрий Савко (clickable)',
-         		link: 'https://wplace.live/?lat=49.98451791149782&lng=36.314032871777314&zoom=14.934702980710728'
-         	},
-         	{ 
-         		src: 'gallery/ghostfaceandmyers.png', 
-         		alt: 'ghostfaceandmyers', 
-         		name: 'Ghost Myers (clickable)',
-         		link: 'https://wplace.live/?lat=50.01378283990406&lng=36.18747037177731&zoom=14.315239980573214'
-         	},
-         	{ 
-         		src: 'gallery/solivan.png', 
-         		alt: 'Solivan Brugmansia', 
-         		name: 'Solivan Brugmansia (clickable)',
-         		link: 'https://wplace.live/?lat=49.978188017159034&lng=36.32721646552732&zoom=15.677949673186601'
-         	}
-         ];
+            const images = 
+            [
+                { 
+                    src: 'gallery/dima.jpg', 
+                    alt: 'Dmitrii Gnidko', 
+                    name: 'Дмитрий Савко (clickable)',
+                    link: 'https://wplace.live/?lat=49.98451791149782&lng=36.314032871777314&zoom=14.934702980710728'
+                },
+                { 
+                    src: 'gallery/ghostfaceandmyers.png', 
+                    alt: 'ghostfaceandmyers', 
+                    name: 'Ghost Myers (clickable)',
+                    link: 'https://wplace.live/?lat=50.01378283990406&lng=36.18747037177731&zoom=14.315239980573214'
+                },
+                { 
+                    src: 'gallery/solivan.png', 
+                    alt: 'Solivan Brugmansia', 
+                    name: 'Solivan Brugmansia (clickable)',
+                    link: 'https://wplace.live/?lat=49.978188017159034&lng=36.32721646552732&zoom=15.677949673186601'
+                },
+                {
+                    src: 'gallery/power.jpg',
+                    alt: 'Power',
+                    name: 'Power (clickable)',
+                    link: 'https://wplace.live/?lat=50.11883132966001&lng=36.267275059277324&zoom=15.26271503418293'
+                }
+            ];
          
-               let currentImageIndex = 0;
-               const image = document.getElementById("galleryImage");
-               const imageInfo = document.getElementById("imageInfo");
-               const prevBtn = document.getElementById("prevBtn");
-               const nextBtn = document.getElementById("nextBtn");
-               
-               let rotation = 0;
-               let mouseX = 0, mouseY = 0;
-         
-               function updateImage() {
-                   const currentImage = images[currentImageIndex];
-                   image.src = currentImage.src;
-                   image.alt = currentImage.alt;
-                   imageInfo.textContent = `${currentImage.name} (${currentImageIndex + 1} of ${images.length})`;
-                   imageInfo.href = currentImage.link;
-               }
-         
-               function showPreviousImage() {
-                   currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-                   updateImage();
-               }
-         
-               function showNextImage() {
-                   currentImageIndex = (currentImageIndex + 1) % images.length;
-                   updateImage();
-               }
-         
-               prevBtn.addEventListener("click", showPreviousImage);
-               nextBtn.addEventListener("click", showNextImage);
-         
-               document.addEventListener("keydown", (event) => {
-                   if (event.key === "ArrowLeft") {
-                       showPreviousImage();
-                   } else if (event.key === "ArrowRight") {
-                       showNextImage();
-                   }
-               });
-         
-               document.addEventListener("mousemove", (event) => {
-                   const { innerWidth, innerHeight } = window;
-                   mouseX = (innerWidth / 2 - event.clientX) / 20;
-                   mouseY = (innerHeight / 2 - event.clientY) / 20;
-                   
-                   if (!image.style.transition || image.style.transition === "transform 0.1s ease-out") {
-                       image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg)`;
-                   }
-               });
-               
-               image.addEventListener("click", () => {
-                   rotation += 360; 
-                   image.style.transition = "transform 0.3s ease-out";
-                   image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1.1)`;
-                   
-                   setTimeout(() => {
-                       image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1)`;
-                       image.style.transition = "transform 0.1s ease-out";
-                   }, 300);
-               });
-         
-               const menuToggle = document.getElementById('menuToggle');
-               const navMenu = document.getElementById('navMenu');
-               
-               menuToggle.addEventListener('click', function() {
-                   navMenu.classList.toggle('active');
-               });
-         
-               document.addEventListener('click', function(event) {
-                   const navMenu = document.getElementById('navMenu');
-                   const menuToggle = document.querySelector('.menu-toggle');
-                   const navbar = document.querySelector('.navbar');
-                   
-                   if (!navbar.contains(event.target)) {
-                       navMenu.classList.remove('active');
-                   }
-               });
-         
-               window.addEventListener('resize', function() {
-                   if (window.innerWidth > 768) {
-                       document.getElementById('navMenu').classList.remove('active');
-                   }
-               });
-         
-               updateImage();
-           
+            let currentImageIndex = 0;
+            const image = document.getElementById("galleryImage");
+            const imageInfo = document.getElementById("imageInfo");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+            
+            let rotation = 0;
+            let mouseX = 0, mouseY = 0;
+        
+            function updateImage() {
+                const currentImage = images[currentImageIndex];
+                image.src = currentImage.src;
+                image.alt = currentImage.alt;
+                imageInfo.textContent = `${currentImage.name} (${currentImageIndex + 1} of ${images.length})`;
+                imageInfo.href = currentImage.link;
+            }
+        
+            function showPreviousImage() {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                updateImage();
+            }
+        
+            function showNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                updateImage();
+            }
+        
+            prevBtn.addEventListener("click", showPreviousImage);
+            nextBtn.addEventListener("click", showNextImage);
+        
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "ArrowLeft") {
+                    showPreviousImage();
+                } else if (event.key === "ArrowRight") {
+                    showNextImage();
+                }
+            });
+        
+            document.addEventListener("mousemove", (event) => {
+                const { innerWidth, innerHeight } = window;
+                mouseX = (innerWidth / 2 - event.clientX) / 20;
+                mouseY = (innerHeight / 2 - event.clientY) / 20;
+                
+                if (!image.style.transition || image.style.transition === "transform 0.1s ease-out") {
+                    image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg)`;
+                }
+            });
+            
+            image.addEventListener("click", () => {
+                rotation += 360; 
+                image.style.transition = "transform 0.3s ease-out";
+                image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1.1)`;
+                
+                setTimeout(() => {
+                    image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1)`;
+                    image.style.transition = "transform 0.1s ease-out";
+                }, 300);
+            });
+        
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        
+            document.addEventListener('click', function(event) {
+                const navMenu = document.getElementById('navMenu');
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navbar = document.querySelector('.navbar');
+                
+                if (!navbar.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+        
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    document.getElementById('navMenu').classList.remove('active');
+                }
+            });
+        
+            updateImage();
       </script>
    </body>
 </html>
