@@ -1,23 +1,24 @@
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Dima Savko Gnida - DiddyBluds" />
-      <meta name="description" content="Блог сайт того як ми малюємо на Wplace.live у Харкові!" />
-      <meta property="theme-color" content="#FFFFFF">
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://dima-savko-gnida.fun/" />
-      <meta property="og:title" content="Dima Savko Gnida - DiddyBluds" />
-      <meta property="og:description" content="Блог сайт того як ми малюємо на Wplace.live у Харкові!" />
-      <meta property="og:image" content="https://dima-savko-gnida.fun/gallery/dima.jpg" />
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://dima-savko-gnida.fun/" />
-      <meta property="twitter:title" content="Dima Savko Gnida - DiddyBluds" />
-      <meta property="twitter:description" content="Блог сайт того як ми малюємо на Wplace.live у Харкові!" />
-      <meta property="twitter:image" content="https://dima-savko-gnida.fun/gallery/dima.jpg" />
-      <title>Dima Savko Gnida - DiddyBluds</title>
-      <link rel="icon" type="image/x-icon" href="gallery/dima.jpg">
-      <style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Dima Savko Gnida - DiddyBluds" />
+    <meta name="description" content="Блог сайт того як ми малюємо на Wplace.live у Харкові!" />
+    <meta property="theme-color" content="#FFFFFF">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dima-savko-gnida.fun/" />
+    <meta property="og:title" content="Dima Savko Gnida - DiddyBluds" />
+    <meta property="og:description" content="Блог сайт того як ми малюємо на Wplace.live у Харкові!" />
+    <meta property="og:image" content="https://dima-savko-gnida.fun/gallery/dima.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://dima-savko-gnida.fun/" />
+    <meta property="twitter:title" content="Dima Savko Gnida - DiddyBluds" />
+    <meta property="twitter:description" content="Блог сайт того як ми малюємо на Wplace.live у Харкові!" />
+    <meta property="twitter:image" content="https://dima-savko-gnida.fun/gallery/dima.jpg" />
+    <title>Dima Savko Gnida - DiddyBluds</title>
+    <link rel="icon" type="image/x-icon" href="gallery/dima.jpg">
+    <style>
         body {
             margin: 0;
             overflow: hidden;
@@ -27,7 +28,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             position: relative;
         }
-        
+
         body::before {
             content: '';
             position: fixed;
@@ -39,288 +40,296 @@
             filter: blur(4px);
             z-index: -1;
         }
-         
-         .navbar {
-         padding: 0;
-         position: relative;
-         z-index: 1000;
-         box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-         background-color: rgba(255, 255, 255, 0.6);
-         backdrop-filter: blur(15px);
-         -webkit-backdrop-filter: blur(15px);
-         border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-         }
-         
-         .nav-container {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         margin: 0 auto;
-         padding: 0 20px;
-         }
-         
-         .logo {
-         color: rgba(0, 0, 0, 1);
-         font-size: 1.5rem;
-         font-weight: bold;
-         text-decoration: none;
-         padding: 15px 0;
-         text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
-         }
-         
-         .nav-menu {
-         display: flex;
-         color: black;
-         list-style: none;
-         margin: 0;
-         padding: 0;
-         }
-         
-         .nav-item {
-         position: relative;
-         }
-         
-         .nav-link {
-         color: rgba(0, 0, 0, 1);
-         text-decoration: none;
-		 font-weight: bold;
-         padding: 20px 20px;
-         display: block;
-         transition: all 0.3s ease;
-         border-radius: 5px;
-         margin: 5px 2px;
-         text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
-         }
-         
-         .nav-link:hover {
-         background-color: rgba(255,255,255,0.6);
-         backdrop-filter: blur(10px);
-         -webkit-backdrop-filter: blur(10px);
-         transform: translateY(-2px);
-         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-         }
-         
-         .menu-toggle {
-         display: none;
-         background: none;
-         border: none;
-         color: rgba(0, 0, 0, 0.9);
-         font-size: 1.5rem;
-         cursor: pointer;
-         padding: 10px;
-         text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
-         }
-         
-         .main-content {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex: 1;
-         position: relative;
-         }
-         
-         .gallery-container {
-         perspective: 1000px;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         width: 100%;
-         position: relative;
-         }
-         
-         .nav-button {
-         background: linear-gradient(145deg, rgba(240, 240, 240, 0.95), rgba(217, 217, 217, 0.95));
-         backdrop-filter: blur(15px);
-         -webkit-backdrop-filter: blur(15px);
-         border: 2px solid rgba(255, 255, 255, 0.6);
-         border-radius: 50%;
-         width: 60px;
-         height: 60px;
-         font-size: 24px;
-         cursor: pointer;
-         transition: all 0.3s ease;
-         box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         color: #333;
-         position: absolute;
-         top: 50%;
-         transform: translateY(-50%);
-         z-index: 10;
-         font-weight: bold;
-         }
-         
-         .nav-button#prevBtn {
-         left: 20px;
-         }
-         
-         .nav-button#nextBtn {
-         right: 20px;
-         }
-         
-         .nav-button:hover {
-         background: linear-gradient(145deg, rgba(220, 220, 220, 0.98), rgba(190, 190, 190, 0.98));
-         box-shadow: 0 12px 35px rgba(0,0,0,0.4);
-         transform: translateY(-50%) scale(1.05);
-         }
-         
-         .nav-button:active {
-         box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-         }
-         
-         .image-container {
-         perspective: 1000px;
-         }
-         
-         .image {
-         width: 300px;
-         height: auto;
-         transition: transform 0.1s ease-out;
-         user-select: none;
-         border-radius: 15px;
-         box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-         border: 2px solid rgba(255, 255, 255, 0.3);
-         }
-         
-         .image-info {
-         position: absolute;
-         bottom: -80px;
-         left: 50%;
-         transform: translateX(-50%);
-         background: rgba(0,0,0,0.9);
-         backdrop-filter: blur(15px);
-         -webkit-backdrop-filter: blur(15px);
-         color: white;
-         padding: 10px 20px;
-         border-radius: 25px;
-         font-size: 14px;
-         font-weight: 500;
-         white-space: nowrap;
-         cursor: pointer;
-         transition: all 0.3s ease;
-         text-decoration: none;
-         display: inline-block;
-         border: 2px solid rgba(255, 255, 255, 0.3);
-         box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-         }
-         
-         .image-info:hover {
-         background: rgba(0,0,0,0.9);
-         transform: translateX(-50%) scale(1.05);
-         box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-         }
-         
-         .counter-container {
-         position: fixed;
-         bottom: 10px;
-         left: 50%;
-         transform: translateX(-50%) scale(2);
-         transform-origin: center bottom;
-         }
-         
-         @media (max-width: 768px) {
-         .menu-toggle {
-         color: rgba(0, 0, 0, 0.9);
-         display: block;
-         }
-         
-         .nav-menu {
-         position: absolute;
-         top: 100%;
-         left: 0;
-         width: 100%;
-         flex-direction: column;
-         background-color: rgba(255, 255, 255, 0.6);
-         backdrop-filter: blur(15px);
-         -webkit-backdrop-filter: blur(15px);
-         border-top: 1px solid rgba(255, 255, 255, 0.4);
-         transform: translateY(-100%);
-         opacity: 0;
-         visibility: hidden;
-         transition: all 0.3s ease;
-         box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-         }
-         
-         .nav-menu.active {
-         transform: translateY(0);
-         opacity: 1;
-         visibility: visible;
-         }
-         
-         .nav-item {
-         width: 100%;
-         }
-         
-         .nav-link {
-         padding: 15px 20px;
-         margin: 0;
-         border-radius: 0;
-         }
-         
-         .nav-button {
-         width: 50px;
-         height: 50px;
-         font-size: 20px;
-         }
-         
-         .nav-button#prevBtn {
-         left: 10px;
-         }
-         
-         .nav-button#nextBtn {
-         right: 10px;
-         }
-         
-         .image {
-         width: 250px;
-         }
-         }
-      </style>
-   </head>
-   <body>
-      <nav class="navbar">
-         <div class="nav-container">
+
+        .navbar {
+            padding: 0;
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: rgba(0, 0, 0, 1);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 15px 0;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-menu {
+            display: flex;
+            color: black;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: rgba(0, 0, 0, 1);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 20px 20px;
+            display: block;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            margin: 5px 2px;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: rgba(0, 0, 0, 0.9);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            position: relative;
+        }
+
+        .gallery-container {
+            perspective: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: relative;
+        }
+
+        .nav-button {
+            background: linear-gradient(145deg, rgba(240, 240, 240, 0.95), rgba(217, 217, 217, 0.95));
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            font-weight: bold;
+        }
+
+        .nav-button#prevBtn {
+            left: 20px;
+        }
+
+        .nav-button#nextBtn {
+            right: 20px;
+        }
+
+        .nav-button:hover {
+            background: linear-gradient(145deg, rgba(220, 220, 220, 0.98), rgba(190, 190, 190, 0.98));
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .nav-button:active {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            perspective: 1000px;
+        }
+
+        .image {
+            width: 300px;
+            height: auto;
+            transition: transform 0.1s ease-out;
+            user-select: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .image-info {
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .image-info:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: translateX(-50%) scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .counter-container {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%) scale(2);
+            transform-origin: center bottom;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                color: rgba(0, 0, 0, 0.9);
+                display: block;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.6);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                border-top: 1px solid rgba(255, 255, 255, 0.4);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-link {
+                padding: 15px 20px;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .nav-button {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+
+            .nav-button#prevBtn {
+                left: 10px;
+            }
+
+            .nav-button#nextBtn {
+                right: 10px;
+            }
+
+            .image {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
             <a href="#" class="logo">DiddyBluds - WPlace - Альянс</a>
             <button class="menu-toggle" id="menuToggle">☰</button>
             <ul class="nav-menu" id="navMenu">
-               <li class="nav-item">
-                  <a target="_blank" rel="noopener noreferrer" href="https://wplace.live/join?id=019885e4-4441-78ec-843c-3ef9fa6fbd0a" class="nav-link">Приєднатися до Альянсу</a>
-               </li>
+                <li class="nav-item">
+                    <a target="_blank" rel="noopener noreferrer"
+                        href="https://t.me/wplace_kharkiv"
+                        class="nav-link">Telegram</a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" rel="noopener noreferrer"
+                        href="https://wplace.live/join?id=019885e4-4441-78ec-843c-3ef9fa6fbd0a"
+                        class="nav-link">Приєднатися до Альянсу</a>
+                </li>
             </ul>
-         </div>
-      </nav>
-      <div class="main-content">
-         <div class="gallery-container">
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="gallery-container">
             <button class="nav-button" id="prevBtn">‹</button>
             <button class="nav-button" id="nextBtn">›</button>
             <div class="image-container">
-               <img id="galleryImage" src="gallery/dima.jpg" alt="Gallery Image" class="image">
-               <a id="imageInfo" class="image-info" href="#" target="_blank">Дмитрий Савко (clickable)</a>
+                <img id="galleryImage" src="gallery/dima.jpg" alt="Gallery Image" class="image">
+                <a id="imageInfo" class="image-info" href="#" target="_blank">Дмитрий Савко (clickable)</a>
             </div>
-         </div>
-      </div>
-      <div class="counter-container">
-         <script type="text/javascript" src="https://counter.websiteout.com/js/36/15/0/1"></script>
-      </div>
-      <script>
-            const images = 
+        </div>
+    </div>
+    <div class="counter-container">
+        <script type="text/javascript" src="https://counter.websiteout.com/js/36/15/0/1"></script>
+    </div>
+    <script>
+        const images =
             [
-                { 
-                    src: 'gallery/dima.jpg', 
-                    alt: 'Dmitrii Gnidko', 
+                {
+                    src: 'gallery/dima.jpg',
+                    alt: 'Dmitrii Gnidko',
                     name: 'Дмитрий Савко (clickable)',
                     link: 'https://wplace.live/?lat=49.98451791149782&lng=36.314032871777314&zoom=14.934702980710728'
                 },
-                { 
-                    src: 'gallery/ghostfaceandmyers.png', 
-                    alt: 'ghostfaceandmyers', 
+                {
+                    src: 'gallery/ghostfaceandmyers.png',
+                    alt: 'ghostfaceandmyers',
                     name: 'Ghost Myers (clickable)',
                     link: 'https://wplace.live/?lat=50.01378283990406&lng=36.18747037177731&zoom=14.315239980573214'
                 },
-                { 
-                    src: 'gallery/solivan.png', 
-                    alt: 'Solivan Brugmansia', 
+                {
+                    src: 'gallery/solivan.png',
+                    alt: 'Solivan Brugmansia',
                     name: 'Solivan Brugmansia (clickable)',
                     link: 'https://wplace.live/?lat=49.978188017159034&lng=36.32721646552732&zoom=15.677949673186601'
                 },
@@ -329,92 +338,99 @@
                     alt: 'Power',
                     name: 'Power (clickable)',
                     link: 'https://wplace.live/?lat=50.11883132966001&lng=36.267275059277324&zoom=15.26271503418293'
+                },
+                {
+                    src: 'gallery/arter.png',
+                    alt: 'Arter',
+                    name: 'Arter (clickable)',
+                    link: 'https://wplace.live/?lat=50.1089117790828&lng=36.25303677802732&zoom=14.775341608017253'
                 }
             ];
-         
-            let currentImageIndex = 0;
-            const image = document.getElementById("galleryImage");
-            const imageInfo = document.getElementById("imageInfo");
-            const prevBtn = document.getElementById("prevBtn");
-            const nextBtn = document.getElementById("nextBtn");
-            
-            let rotation = 0;
-            let mouseX = 0, mouseY = 0;
-        
-            function updateImage() {
-                const currentImage = images[currentImageIndex];
-                image.src = currentImage.src;
-                image.alt = currentImage.alt;
-                imageInfo.textContent = `${currentImage.name} (${currentImageIndex + 1} of ${images.length})`;
-                imageInfo.href = currentImage.link;
-            }
-        
-            function showPreviousImage() {
-                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-                updateImage();
-            }
-        
-            function showNextImage() {
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                updateImage();
-            }
-        
-            prevBtn.addEventListener("click", showPreviousImage);
-            nextBtn.addEventListener("click", showNextImage);
-        
-            document.addEventListener("keydown", (event) => {
-                if (event.key === "ArrowLeft") {
-                    showPreviousImage();
-                } else if (event.key === "ArrowRight") {
-                    showNextImage();
-                }
-            });
-        
-            document.addEventListener("mousemove", (event) => {
-                const { innerWidth, innerHeight } = window;
-                mouseX = (innerWidth / 2 - event.clientX) / 20;
-                mouseY = (innerHeight / 2 - event.clientY) / 20;
-                
-                if (!image.style.transition || image.style.transition === "transform 0.1s ease-out") {
-                    image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg)`;
-                }
-            });
-            
-            image.addEventListener("click", () => {
-                rotation += 360; 
-                image.style.transition = "transform 0.3s ease-out";
-                image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1.1)`;
-                
-                setTimeout(() => {
-                    image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1)`;
-                    image.style.transition = "transform 0.1s ease-out";
-                }, 300);
-            });
-        
-            const menuToggle = document.getElementById('menuToggle');
-            const navMenu = document.getElementById('navMenu');
-            
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-        
-            document.addEventListener('click', function(event) {
-                const navMenu = document.getElementById('navMenu');
-                const menuToggle = document.querySelector('.menu-toggle');
-                const navbar = document.querySelector('.navbar');
-                
-                if (!navbar.contains(event.target)) {
-                    navMenu.classList.remove('active');
-                }
-            });
-        
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768) {
-                    document.getElementById('navMenu').classList.remove('active');
-                }
-            });
-        
+
+        let currentImageIndex = 0;
+        const image = document.getElementById("galleryImage");
+        const imageInfo = document.getElementById("imageInfo");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        let rotation = 0;
+        let mouseX = 0, mouseY = 0;
+
+        function updateImage() {
+            const currentImage = images[currentImageIndex];
+            image.src = currentImage.src;
+            image.alt = currentImage.alt;
+            imageInfo.textContent = `${currentImage.name} (${currentImageIndex + 1} of ${images.length})`;
+            imageInfo.href = currentImage.link;
+        }
+
+        function showPreviousImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
             updateImage();
-      </script>
-   </body>
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateImage();
+        }
+
+        prevBtn.addEventListener("click", showPreviousImage);
+        nextBtn.addEventListener("click", showNextImage);
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft") {
+                showPreviousImage();
+            } else if (event.key === "ArrowRight") {
+                showNextImage();
+            }
+        });
+
+        document.addEventListener("mousemove", (event) => {
+            const { innerWidth, innerHeight } = window;
+            mouseX = (innerWidth / 2 - event.clientX) / 20;
+            mouseY = (innerHeight / 2 - event.clientY) / 20;
+
+            if (!image.style.transition || image.style.transition === "transform 0.1s ease-out") {
+                image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg)`;
+            }
+        });
+
+        image.addEventListener("click", () => {
+            rotation += 360;
+            image.style.transition = "transform 0.3s ease-out";
+            image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1.1)`;
+
+            setTimeout(() => {
+                image.style.transform = `rotateY(${rotation - mouseX}deg) rotateX(${mouseY}deg) scale(1)`;
+                image.style.transition = "transform 0.1s ease-out";
+            }, 300);
+        });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (event) {
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.navbar');
+
+            if (!navbar.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) {
+                document.getElementById('navMenu').classList.remove('active');
+            }
+        });
+
+        updateImage();
+    </script>
+</body>
+
 </html>
