@@ -13,6 +13,12 @@ const images =
         link: 'https://wplace.live/?lat=50.01378283990406&lng=36.18747037177731&zoom=14.315239980573214'
     },
     {
+        src: 'gallery/viktor.png',
+        alt: 'Viktor',
+        name: 'Viktor by J0nathan550 (clickable)',
+        link: 'https://wplace.live/?lat=49.99875712874008&lng=36.305068028027335&zoom=14.49638230586542'
+    },
+    {
         src: 'gallery/ihaveadream.jpg',
         alt: 'I Have a Dream',
         name: 'I HAVE A DREAM by mozzie (clickable)',
