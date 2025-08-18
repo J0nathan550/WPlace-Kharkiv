@@ -59,7 +59,7 @@ const images =
         alt: 'Arter',
         name: 'Arter by Arter (clickable)',
         link: 'https://wplace.live/?lat=50.131791281407956&lng=36.25584927802733&zoom=14.5'
-    },
+    }
 ];
 
 let currentImageIndex = 0;
