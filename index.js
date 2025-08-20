@@ -19,6 +19,12 @@ const images =
         link: 'https://wplace.live/?lat=49.99875712874008&lng=36.305068028027335&zoom=14.49638230586542'
     },
     {
+        src: 'gallery/soprano.jpg',
+        alt: 'Soprano',
+        name: 'Soprano by mozzie (clickable)',
+        link: 'https://wplace.live/?lat=40.10785739251732&lng=44.86473599677733&zoom=9.977591380760746'
+    },
+    {
         src: 'gallery/ihaveadream.jpg',
         alt: 'I Have a Dream',
         name: 'I HAVE A DREAM by mozzie (clickable)',
