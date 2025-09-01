@@ -31,6 +31,12 @@ const images =
         link: 'https://wplace.live/?lat=40.10785739251732&lng=44.86473599677733&zoom=9.977591380760746'
     },
     {
+        src: 'gallery/brenntkopf.jpg',
+        alt: 'Brenntkopf Development',
+        name: 'Brenntkopf Development by J0nathan550 (clickable)',
+        link: 'https://wplace.live/?lat=50.01683259869539&lng=35.61582974677732&zoom=13.545431476761292'
+    },
+    {
         src: 'gallery/ihaveadream.jpg',
         alt: 'I Have a Dream',
         name: 'I HAVE A DREAM by mozzie (clickable)',
